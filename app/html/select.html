@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>越秀区企业信用评级系统--企业查询页面</title>
+    <!-- 引入 echarts.js -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/select.css">
+    <link rel="stylesheet" href="../css/icon/iconfont.css">
+    <script src="../js/echarts.js"></script>
+</head>
+<body class="Body">
+    <div class="navbar-fixed-top navtop">
+        企业政务评级系统
+    </div>
+    <div class="main">
+        <div class="col-lg-2 col-xs-2 col-sm-2 col-1">
+            <div class="main-left">
+                <div class="main-b-l">
+                    <div class="A1" id="main3"> </div>
+                    <script>
+                        <!--级别占比及统计-->
+                        var myChart3 = echarts.init(document.getElementById('main3'));
+                        var colorList = ['#184c86','#29f1ff','#2fbbf8','#097fbc'];
+                        option3 = {
+                            tooltip : {
+                                trigger: 'item',
+                                formatter: "{a} <br/>{b} : {c} ({d}%)"
+                            },
+                            legend: {
+                                orient : 'vertical',
+                                x : 'left',
+                                itemWidth:0,
+                                itemHeight:0,
+                                textStyle:{
+                                    color:'#fff'
+                                },
+                                top: 25,
+                                bottom: 25,
+                                left:'10',
+                                data:['A','B','C','D'],
+                                color:'#fff'
+                            },
+                            calculable : false,
+                            series : [
+                                {
+                                    name:'访问来源',
+                                    type:'pie',
+                                    center: ['60%', '50%'],
+                                    radius : ['45%', '75%'],
+                                    itemStyle : {
+                                        normal : {
+                                            color: function (params){
+                                                return colorList[params.dataIndex];
+                                            },
+                                            label : {
+                                                position : 'inner'
+                                            },
+                                            labelLine : {
+                                                show : false
+                                            }
+                                        }
+                                    },
+                                    // for funnel
+                                    x: '60%',
+                                    width: '35%',
+                                    funnelAlign: 'left',
+                                    data:[
+                                        {value:335, name:'A'},
+                                        {value:310, name:'B'},
+                                        {value:234, name:'C'},
+                                        {value:135, name:'D'}
+                                    ]
+                                }
+                            ]
+                        };
+                        myChart3.setOption(option3);
+
+                    </script>
+                </div>
+                <div class="main-b-2">
+                    <div class="main-title">
+                        <a><div class="main-t main-sel">全部企业</div></a>
+                        <a><div class="main-t">A级企业</div></a>
+                        <a><div class="main-t">B级企业</div></a>
+                        <a><div class="main-t">C级企业</div></a>
+                        <a><div class="main-t">D级企业</div></a>
+                    </div>
+                    <div class="A2" id="A2"></div>
+                    <script>
+                        //获得荣誉的企业
+                        var myChart7 = echarts.init(document.getElementById('A2'));
+                        option7 = {
+                            tooltip : {
+                                trigger: 'axis',
+                                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                                }
+                            },
+                            grid:{
+                                left:20,
+                                right:20,
+                                top:30,
+                                bottom:30
+                            },
+                            yAxis : [
+                                {
+                                    type : 'value',
+                                    show:true,
+                                    splitLine:{
+                                        show: true,
+                                        lineStyle:{
+                                            color:'#0f6799'
+                                        }
+                                    },
+                                    axisTick:{
+                                        show:false
+                                    },
+                                    axisLabel:{
+                                        show:false
+                                    },
+                                    axisLine:{
+                                        show:false
+                                    }
+                                }
+                            ],
+                            xAxis : [
+                                {
+                                    type : 'category',
+                                    data : ['单位6','单位7','单位8','单位9'],
+                                    axisLabel:{
+                                        color:'#ccc'
+                                    }
+                                }
+                            ],
+                            series : [
+                                {
+                                    name:'单位',
+                                    type:'bar',
+                                    stack: '总量',
+                                    itemStyle : {
+                                        normal:
+                                            {
+                                                color:'#68bcea',
+                                                label : {
+                                                    show: false,
+                                                    position: 'insideRight'
+                                                }
+                                            }
+                                    },
+                                    data:[320, 302, 301, 334]
+                                },
+                                {
+                                    name:'单位7',
+                                    type:'bar',
+                                    stack: '总量',
+                                    itemStyle : {
+                                        normal:
+                                            {
+                                                color:'#024d6f',
+                                                label : {
+                                                    show: false,
+                                                    position: 'insideRight'
+                                                }
+                                            }
+                                    },
+                                    data:[120, 132, 101, 134]
+                                }
+                            ]
+                        };
+                        myChart7.setOption(option7);
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10 col-xs-10 col-sm-10">
+            <div class="main-right">
+                <div class="main-ng">
+                    <a href="../index.html">首页</a>
+                    <span>></span>
+                    <a>企业查询页面</a>
+                </div>
+                <div class="main-search">
+                    <div class="col-lg-12 col-xs-12 col-sm-12 pad-no">
+                        <div class="col-lg-4 col-xs-4 col-sm-4 pad-no">
+                            <div class="form-inline">
+                                <a class="icon-p"><i class="icon icon-zuzhi"></i></a>
+                                <span>组织机构代码</span>
+                                <div class="form-group">
+                                    <input class="form-control focus-theme" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-4 col-sm-4">
+                            <div class="form-inline">
+                                <a class="icon-p"><i class="icon icon-farenchaxunyuyue"></i></a>
+                                <span>法人姓名查询</span>
+                                <div class="form-group">
+                                    <input class="form-control focus-theme" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-xs-12 col-sm-12 pad-no">
+                        <div class="col-lg-4 col-xs-4 col-sm-4 pad-no">
+                            <div class="form-inline">
+                                <a class="icon-p"><i class="icon icon-xinyongdaima"></i></a>
+                                <span>社会统一信用代码</span>
+                                <div class="form-group">
+                                    <input class="form-control icon-xinyongdaima" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xs-4 col-sm-4">
+                            <div class="form-inline">
+                                <a class="icon-p"><i class="icon icon-qiyemingcheng"></i></a>
+                                <span>企业名称查询</span>
+                                <div class="form-group">
+                                    <input class="form-control focus-theme" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-xs-2 col-sm-2">
+                            <div class="button-inline">
+                                <button class="in-button" type="button">查询</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-table">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th class="w-50">序号</th>
+                            <th class="w-80">信用等级</th>
+                            <th>企业名称</th>
+                            <th class="w-80">企业法人</th>
+                            <th>企业地址</th>
+                            <th>社会统一信用代码</th>
+                            <th>联系电话</th>
+                            <th>最后更新时间</th>
+                            <th>备注</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                            <tr>
+                                <td>1</td>
+                                <td>B</td>
+                                <td>中国电信广东分公司</td>
+                                <td>刘强东</td>
+                                <td>越秀区东风中路321号</td>
+                                <td>283729175291832182QB</td>
+                                <td>15338601655</td>
+                                <td>2017/12/4</td>
+                                <td>无</td>
+                                <td><button type="button" class="btn-sm btn-success succ">详情</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>B</td>
+                                <td>中国电信广东分公司</td>
+                                <td>刘强东</td>
+                                <td>越秀区东风中路321号</td>
+                                <td>283729175291832182QB</td>
+                                <td>15338601655</td>
+                                <td>2017/12/4</td>
+                                <td>无</td>
+                                <td><button type="button" class="btn-sm btn-success succ">详情</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>B</td>
+                                <td>中国电信广东分公司</td>
+                                <td>刘强东</td>
+                                <td>越秀区东风中路321号</td>
+                                <td>283729175291832182QB</td>
+                                <td>15338601655</td>
+                                <td>2017/12/4</td>
+                                <td>无</td>
+                                <td><button type="button" class="btn-sm btn-success succ">详情</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>B</td>
+                                <td>中国电信广东分公司</td>
+                                <td>刘强东</td>
+                                <td>越秀区东风中路321号</td>
+                                <td>283729175291832182QB</td>
+                                <td>15338601655</td>
+                                <td>2017/12/4</td>
+                                <td>无</td>
+                                <td><button type="button" class="btn-sm btn-success succ">详情</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>B</td>
+                                <td>中国电信广东分公司</td>
+                                <td>刘强东</td>
+                                <td>越秀区东风中路321号</td>
+                                <td>283729175291832182QB</td>
+                                <td>15338601655</td>
+                                <td>2017/12/4</td>
+                                <td>无</td>
+                                <td><button type="button" class="btn-sm btn-success succ">详情</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>B</td>
+                                <td>中国电信广东分公司</td>
+                                <td>刘强东</td>
+                                <td>越秀区东风中路321号</td>
+                                <td>283729175291832182QB</td>
+                                <td>15338601655</td>
+                                <td>2017/12/4</td>
+                                <td>无</td>
+                                <td><button type="button" class="btn-sm btn-success succ">详情</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>B</td>
+                                <td>中国电信广东分公司</td>
+                                <td>刘强东</td>
+                                <td>越秀区东风中路321号</td>
+                                <td>283729175291832182QB</td>
+                                <td>15338601655</td>
+                                <td>2017/12/4</td>
+                                <td>无</td>
+                                <td><button type="button" class="btn-sm btn-success succ">详情</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="page" class="text-center">
+                        <ul class="pagination">
+                            <li>上一页</li>
+                            <li class="page-s">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>下一页</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

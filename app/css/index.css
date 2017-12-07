@@ -1,0 +1,592 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    /*font-size: 14px;*/
+    font-family: 微软雅黑;
+    height: 100%;
+    overflow: hidden;
+}
+.Body{
+    width: 100%;
+    height: 100%;
+    background: url("../images/back-bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.Body-bg{
+    width: 100%;
+    height: 100%;
+}
+.main-title{
+    width: 99%;
+    padding-left: 1%;
+    margin-top: 1%;
+    /*margin-bottom: 10px;*/
+    height: 5%;
+}
+.Bg-main{
+    width: 99%;
+    height: 93%;
+    padding-left: 1%;
+}
+.main-img1{
+    width: 38%;
+    float: left;
+}
+.main-img1 img{
+    width: 100%;
+}
+.main-title1{
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    color: #f5ba22;
+    float: left;
+}
+.main-img2{
+    width:17%;
+    float: left;
+    margin-top: 15px;
+}
+.main-img2 img{
+    width: 100%;
+}
+.main-title2{
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    float: left;
+}
+/*.Bg-main{*/
+    /*margin-top: 10px;*/
+/*}*/
+.Bg-main1{
+    width: 22%;
+    height: 100%;
+    float: left;
+    margin-right: 1%;
+    position: relative;
+}
+.BGM1{
+    position: relative;
+    height:40%;
+}
+.BGM2{
+    position: relative;
+    height:60%;
+}
+.bgm1 img,.bgm2 img,.bgm3 img,.bgm4 img,.bgm5 img,.bgm6 img,.bgm7 img{
+    width: 100%;
+    height: 100%;
+}
+.bgm1{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: url("../images/t1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm2{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background: url("../images/t2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm3{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 98%;
+    left: 0%;
+    background: url("../images/t3.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm4{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 98%;
+    right: 0%;
+    background: url("../images/t4.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm5{
+    width: 0.25%;
+    position: absolute;
+    top: 0%;
+    left: 25%;
+}
+.Bg-main1-t{
+    width: 50%;
+    text-align: center;
+    font-size: 14px;
+    color: #f5ba22;
+    position: absolute;
+    top: 0%;
+    left: 25%;
+}
+.bgm6{
+    width: 0.2%;
+    position: absolute;
+    top: 0%;
+    right: 25%;
+}
+.bgm7{
+    width: 96%;
+    height:97%;
+    position: absolute;
+    top: 3.5%;
+    left: 2%;
+    background: url("../images/bor1.png")no-repeat;
+    background-size: calc(100% - 1px) calc(100% - 1px);
+}
+.bgm11 img,.bgm22 img,.bgm33 img,.bgm44 img{
+    width: 100%;
+    height: 100%;
+}
+.bgm11{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: url("../images/t1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm22{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background: url("../images/t2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm33{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 89%;
+    left: 0%;
+    background: url("../images/t3.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm44{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 89%;
+    right: 0%;
+    background: url("../images/t4.png") no-repeat;
+    background-size: 100% 100%;
+}
+.Bg-main2{
+    width: 51%;
+    height: 100%;
+    float: left;
+    margin-right: 1%;
+}
+.bgm-bg{
+    width: 98%;
+    height: 63%;
+    margin-top: 1%;
+    background: url(../images/bor2.png) no-repeat;
+    background-size: 100% 100%;
+}
+.Bg-main1-bor3 {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    /*border: 1px solid #000;*/
+}
+.bgm32{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: -2%;
+    right: -2%;
+    background: url("../images/t2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm34{
+    width: 12px;
+    height:12px;
+    position: absolute;
+    top: 99%;
+    right: -2%;
+    background: url("../images/t4.png");
+    background-size: 100% 100%;
+}
+.bgm-bg2{
+    position: relative;
+    width: 100%;
+    height: 33%;
+}
+.Bg-main3{
+    width: 24%;
+    height: 100%;
+    float: left;
+}
+.bgm3-11{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: url("../images/t1.png");
+    background-size: 100% 100%;
+}
+.bgm3-22{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background: url("../images/t2.png");
+    background-size: 100% 100%;
+}
+.bgm3-33{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 99.5%;
+    /*top:320px;*/
+    left: 0%;
+    background: url("../images/t3.png");
+    background-size: 100% 100%;
+}
+.bgm3-44{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 99.5%;
+    /*top:320px;*/
+    right: 0%;
+    background: url("../images/t4.png");
+    background-size: 100% 100%;
+}
+.bgm3-11 img,.bgm3-22 img,.bgm3-33 img,.bgm3-44 img{
+    width: 100%;
+    height: 100%;
+}
+.Bg-main1-bor{
+    margin-left: 1.5%;
+    width: 100%;
+    height: calc(100% - 1px);
+    padding-top: 20px;
+}
+.bgmain2{
+    width: 100%;
+    height: 100%;
+}
+.Bg-main1-bor2{
+    margin-left: 1.5%;
+    margin-top: 5%;
+    width: 95%;
+    /*height: 60%;*/
+    height: calc(60%);
+}
+.Bg-main1-bor2-2{
+    margin-left: 1.5%;
+    padding-top: 8%;
+    width: 95%;
+    height: calc(30%);
+}
+.BGM2-2{
+    position: relative;
+    height:64%;
+}
+.company{
+    font-size: 14px;
+    color: #fff;
+    padding-left: 2%;
+}
+.com{
+    padding-left: 20px;
+}
+.company1{
+    margin-top: 20px;
+}
+.com11{
+    width: 40%;
+    text-align: center;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+}
+.com12{
+    width: 30%;
+    text-align: left;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+}
+.com13{
+    width: 30%;
+    text-align: left;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+}
+.company1 span{
+    font-size: 14px;
+    color: #fff;
+}
+.company2{
+    clear: both;
+    width: 100%;
+    height: 14px;
+    border-radius: 5px;
+    background: #d4773b;
+}
+.com21{
+    width: 20%;
+    height: 12px;
+    border: 1px solid #f8d790;
+    background: #f8d790;
+    display: block;
+    border-radius: 5px 0 0 5px;
+    float: left;
+}
+.com22{
+    width: 28%;
+    height: 12px;
+    border: 1px solid #f1c332;
+    background: #f1c332;
+    display: block;
+    float: left;
+}
+.com23{
+     width: 30%;
+     height: 12px;
+     border: 1px solid #de942a;
+     background: #de942a;
+     display: block;
+     float: left;
+ }
+.Bg-main3-bor{
+    width: 300px;
+    height: 300px;
+}
+.Bg-main3-t{
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    color: #f5ba22;
+    padding-top: 8px;
+    padding-left: 4px;
+}
+.BGM3{
+    position: relative;
+    height: 100%;
+}
+.bgm1-1,.bgm2-2,.bgm1-12,.bgm2-22,.bgm3-3,.bgm4-4,.bgm3-32,.bgm4-42{
+    width: 2.22%;
+}
+.BGM3 img{
+    width: 100%;
+}
+.bgm-bg2 img{
+    width: 100%;
+}
+.bgm1-1{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: url("../images/t1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm3-3{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 88%;
+    left: 0%;
+    background: url("../images/t3.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm2-2{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    background: url("../images/t2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm4-4{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 88%;
+    left: 34%;
+    background: url("../images/t4.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm1-12{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0%;
+    left: 38%;
+    background: url("../images/t1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm3-32{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 88%;
+    left: 38%;
+    background: url("../images/t3.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm2-22{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background: url("../images/t2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgm4-42{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 88%;
+    right: 0%;
+    background: url("../images/t4.png") no-repeat;
+    background-size: 100% 100%;
+}
+.Bg-main2-bor3 {
+    margin-top: 2%;
+    width: 100%;
+    height: 96%;
+}
+.main2-bor1{
+    width: 34%;
+    height: 92%;
+    float: left;
+    margin: 1% 1%;
+    background: url(../images/bor4.png) no-repeat;
+    background-size: calc(100% - 1px) calc(100% - 1px);
+}
+.main2-bor2{
+    width: 60%;
+    height: 92%;
+    float: left;
+    margin: 1% 1% 1% 3%;
+    background: url("../images/bor3.png") no-repeat;
+    background-size: calc(100% - 1px) calc(100% - 1px);
+}
+.m2-text1 {
+    position: absolute;
+    top: 6%;
+    /* margin-left: 1.5%; */
+    width: 33%;
+    height: 83%;
+}
+.Bg-main2-t{
+    width: 36%;
+    text-align: center;
+    font-size: 14px;
+    color: #f5ba22;
+    position: absolute;
+    top: 0%;
+}
+.Bg-main2-t2{
+    width: 60%;
+    text-align: center;
+    font-size: 14px;
+    color: #f5ba22;
+    position: absolute;
+    top: 0%;
+    left: 39%;
+}
+.m2-text2 {
+    position: absolute;
+    top: 0px;
+    margin-left: 0%;
+    width: 58%;
+    height: 83%;
+}
+.Bg-main3-bor{
+    margin-left: 1.5%;
+    width: 100%;
+    height: 100%;
+}
+.A1{
+    width: 100%;
+    height: calc(65%);
+}
+.Bg-main3-bor2 {
+    margin-left: 1.5%;
+    margin-top: 3%;
+    width: 100%;
+    height: 90%;
+    padding-top: 3%;
+}
+.A2 {
+    margin-left: 1.5%;
+    width: 95%;
+    /*height: 250px;*/
+    margin-top: -10%;
+    height: calc(40%);
+}
+.BGM1-2{
+    position: relative;
+    height:36%;
+}
+.B-bgm1{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 2.5%;
+    left: 0%;
+    background: url("../images/t1.png");
+    background-size: 100% 100%;
+}
+.B-bgm2{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 2.5%;
+    right: 0%;
+    background: url("../images/t2.png");
+    background-size: 100% 100%;
+}
+.B-bgm3{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 84%;
+    /*top:320px;*/
+    left: 0%;
+    background: url("../images/t3.png");
+    background-size: 100% 100%;
+}
+.B-bgm4{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 84%;
+    right: 0%;
+    background: url("../images/t4.png");
+    background-size: 100% 100%;
+}
+.B-bgm1 img, .B-bgm2 img, .B-bgm3 img, .B-bgm4 img{
+    width: 100%;
+    height: 100%;
+}

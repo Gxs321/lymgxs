@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>越秀区企业信用评级系统</title>
+    <!-- 引入 echarts.js -->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/echarts.js"></script>
+</head>
+<body class="Body">
+<div class="Body-bg">
+    <div class="main-title">
+        <div class="main-img1"><img src="images/b1.png" alt=""></div>
+        <div class="main-title1">越秀区企业信用评级系统</div>
+        <div class="main-img2"><img src="images/b2.png" alt=""></div>
+        <div class="main-title2">统计图</div>
+    </div>
+    <div class="Bg-main">
+        <div class="Bg-main1">
+            <div class="BGM1">
+                <div class="bgm1"></div>
+                <div class="bgm2"></div>
+                <div class="bgm3"></div>
+                <div class="bgm4"></div>
+                <div class="Bg-main1-t">企业违法统计图</div>
+                <div class="bgm7"></div>
+                <div class="Bg-main1-bor" id="main1"></div>
+                <script>
+                    var myChart1 = echarts.init(document.getElementById('main1'));
+//                    $.ajax({
+//                        type:'get',
+//                        url:'',
+//                        async:true,
+//                        dataType: "json"
+//                    });
+                    var dataStyle = {
+                        normal: {
+                            label: {show:true},
+                            labelLine: {show:true},
+                            shadowBlur: 40,
+                            shadowColor: 'rgba(40, 40, 40, 0.5)',
+                        }
+                    };
+                    var placeHolderStyle = {
+                        normal : {
+                            color: 'rgba(0,0,0,0)',
+                            label: {show:false},
+                            labelLine: {show:false}
+                        },
+                    };
+                    option1 = {
+                        tooltip: {
+                            show: true,
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        series: [
+                            {
+                                name: '',
+                                type: 'pie',
+                                center: ['65%', '45%'],
+                                radius: ['80%', '85%'],
+                                itemStyle: dataStyle,
+                                startAngle: 270,
+                                label:{
+                                    emphasis:{
+                                        show: false
+                                    }
+                                },
+                                data: [
+                                    {
+                                        value: 4,
+                                        itemStyle:{
+                                            normal:{
+                                                color: '#23f2fc',
+                                                labelLine : {
+                                                    show : false
+                                                }
+                                            }
+                                        },
+                                    },
+                                    {
+                                        value: 32,
+                                        name: 'invisible',
+                                        itemStyle: placeHolderStyle,
+                                        label:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        tooltip:{
+                                            show: false
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                name: '一季度',
+                                type: 'pie',
+                                center: ['65%', '45%'],
+                                radius: ['70%', '75%'],
+                                itemStyle: dataStyle,
+                                startAngle: 270,
+                                z:1,
+                                data: [
+                                    {
+                                        value: 60,
+                                        name: '一季度',
+                                        itemStyle: {
+                                            normal: {color: '#23f2fc'}
+                                        },
+                                        label:{
+                                            normal:{
+                                                textStyle: {
+                                                    color: '#fff'
+                                                },
+                                                formatter: [
+                                                    '{a|一季度}',
+                                                    '{b|976家}'
+                                                ].join('\n'),
+                                                rich: {
+                                                    a: {
+                                                        color: '#f5ba22',
+                                                        backgroundColor:'#007abe',
+                                                        lineHeight: 25,
+                                                        padding:2,
+                                                        borderRadius: 4
+                                                    },
+                                                    b: {
+                                                        color: '#fff',
+                                                        padding:[0,2]
+                                                    },
+                                                    x: {
+                                                        fontSize: 14,
+                                                        fontFamily: 'Microsoft YaHei',
+                                                        borderColor: '#449933',
+                                                        borderRadius: 4
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show:true,
+                                                length:5,
+                                                length2:5,
+                                                lineStyle:{
+                                                    color:'#f5ba22'
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        value: 71,
+                                        name: 'invisible',
+                                        itemStyle: placeHolderStyle,
+                                        label:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        tooltip:{
+                                            show: false
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                name: '二季度',
+                                type: 'pie',
+                                center: ['65%', '45%'],
+                                radius: ['60%', '65%'],
+                                itemStyle: dataStyle,
+                                startAngle: 270,
+                                z:2,
+                                data: [
+                                    {
+                                        value: 85,
+                                        name: '二季度',
+                                        itemStyle: {
+                                            normal: {color: '#2cc5ff'}
+                                        },
+                                        label:{
+                                            normal:{
+                                                textStyle: {
+                                                    color: '#fff'
+                                                },
+                                                formatter: [
+                                                    '{a|二季度}',
+                                                    '{b|976家}'
+                                                ].join('\n'),
+                                                rich: {
+                                                    a: {
+                                                        color: '#f5ba22',
+                                                        backgroundColor:'#007abe',
+                                                        lineHeight: 25,
+                                                        padding:2,
+                                                        borderRadius: 4
+                                                    },
+                                                    b: {
+                                                        color: '#fff',
+                                                        padding:[0,2]
+                                                    },
+                                                    x: {
+                                                        fontSize: 14,
+                                                        fontFamily: 'Microsoft YaHei',
+                                                        borderColor: '#449933',
+                                                        borderRadius: 4
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show:true,
+                                                length:10,
+                                                length2:55,
+                                                lineStyle:{
+                                                    color:'#f5ba22'
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        value: 71,
+                                        name: 'invisible',
+                                        itemStyle: placeHolderStyle,
+                                        label:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        tooltip:{
+                                            show: false
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                name: '三季度',
+                                type: 'pie',
+                                center: ['65%', '45%'],
+                                radius: ['50%', '55%'],
+                                itemStyle: dataStyle,
+                                startAngle: 270,
+                                z:3,
+                                data: [
+                                    {
+                                        value: 120,
+                                        name: '三季度',
+                                        itemStyle: {
+                                            normal: {color: '#0187c6'}
+                                        },
+                                        label:{
+                                            normal:{
+                                                textStyle: {
+                                                    color: '#fff'
+                                                },
+                                                formatter: [
+                                                    '{a|三季度}',
+                                                    '{b|976家}'
+                                                ].join('\n'),
+                                                rich: {
+                                                    a: {
+                                                        color: '#f5ba22',
+                                                        backgroundColor:'#007abe',
+                                                        lineHeight: 25,
+                                                        padding:2,
+                                                        borderRadius: 4
+                                                    },
+                                                    b: {
+                                                        color: '#fff',
+                                                        padding:[0,2]
+                                                    },
+                                                    x: {
+                                                        fontSize: 14,
+                                                        fontFamily: 'Microsoft YaHei',
+                                                        borderColor: '#449933',
+                                                        borderRadius: 4
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show:true,
+                                                length:25,
+                                                length2:15,
+                                                lineStyle:{
+                                                    color:'#f5ba22'
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        value: 71,
+                                        name: 'invisible',
+                                        itemStyle: placeHolderStyle,
+                                        label:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        tooltip:{
+                                            show: false
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                name: '四季度',
+                                type: 'pie',
+                                center: ['65%', '45%'],
+                                radius: ['40%', '45%'],
+                                itemStyle: dataStyle,
+                                startAngle: 270,
+                                z:4,
+                                data: [
+                                    {
+                                        value: 270,
+                                        name: '四季度',
+                                        itemStyle: {
+                                            normal: {color: '#176da1'}
+                                        },
+                                        label:{
+                                            normal:{
+                                                textStyle: {
+                                                    color: '#fff'
+                                                },
+                                                formatter: [
+                                                    '{a|四季度}',
+                                                    '{b|976家}'
+                                                ].join('\n'),
+                                                rich: {
+                                                    a: {
+                                                        color: '#f5ba22',
+                                                        backgroundColor:'#007abe',
+                                                        lineHeight: 25,
+                                                        padding:2,
+                                                        borderRadius: 4
+                                                    },
+                                                    b: {
+                                                        color: '#fff',
+                                                        padding:[0,2]
+                                                    },
+                                                    x: {
+                                                        fontSize: 14,
+                                                        fontFamily: 'Microsoft YaHei',
+                                                        borderColor: '#449933',
+                                                        borderRadius: 4
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show:true,
+                                                length:55,
+                                                length2:20,
+                                                lineStyle:{
+                                                    color:'#f5ba22'
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        value: 97,
+                                        name: 'invisible',
+                                        itemStyle: placeHolderStyle,
+                                        label:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        labelLine:{
+                                            normal:{
+                                                show: false
+                                            }
+                                        },
+                                        tooltip:{
+                                            show: false
+                                        }
+                                    }
+                                ]
+                            }
+
+                        ]
+                    };
+                    myChart1.setOption(option1);
+                </script>
+            </div>
+            <div class="BGM2">
+                <div class="bgm11"></div>
+                <div class="bgm22"></div>
+                <div class="bgm33"></div>
+                <div class="bgm44"></div>
+                <div class="Bg-main1-t">获得荣誉的企业</div>
+                <div class="bgmain2">
+                    <div class="Bg-main1-bor2" id="main2"></div>
+                    <script>
+                        //获得荣誉的企业
+                        var myChart2 = echarts.init(document.getElementById('main2'));
+                        var colorList = ['#f2c52e','#f57327','#fcd789','#fea405','#3d93ce','#12fba0','#f33b57'];
+                        option2 = {
+                            title : {
+                                text: '各行业标杆企业',
+                                top:20,
+                                left:10,
+                                textStyle:{
+                                    fontSize: 14,
+                                    color:'#ddd'
+                                }
+                            },
+                            tooltip : {
+                                trigger: 'axis',
+                                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                                }
+                            },
+                            grid: {
+                                left: '2%',
+                                right: '4%',
+                                bottom: '3%',
+                                containLabel: true
+                            },
+                            yAxis : [
+                                {
+                                    type : 'category',
+                                    data : ['模范企业', '移动大客户', '越秀金卡', '诚信药店', '运输企业', '纳税大户', '守合同'],
+                                    axisLabel:{
+                                        color:'#ccc',
+                                    },
+                                    axisTick: {
+                                        alignWithLabel: true
+                                    }
+                                }
+                            ],
+                            xAxis : [
+                                {
+                                    type : 'value',
+                                    axisLabel:{
+                                        color:'#ccc'
+                                    },
+                                    splitLine:{
+                                        show: false,
+                                    }
+                                },
+
+                            ],
+                            series : [
+                                {
+                                    name:'直接访问',
+                                    type:'bar',
+                                    barWidth: '10',
+                                    z: 10,
+                                    label:{
+                                        normal:{
+                                            show: true,
+                                            position: 'right'
+                                        }
+                                    },
+                                    itemStyle:{
+                                        normal:{
+                                            color: function (params){
+                                                return colorList[params.dataIndex];
+                                            }
+                                        },
+                                        emphasis: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    },
+                                    data:[100, 520, 200, 334, 390, 330, 220]
+                                },
+                                {
+                                    name:'直接访问',
+                                    type:'bar',
+                                    barGap: '-100%',
+                                    barWidth: '10',
+                                    itemStyle:{
+                                        normal:{
+                                            color: '#103351',
+                                        },
+                                        emphasis: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    },
+                                    data:[2500,2500,2500,2500,2500,2500,2500]
+                                }
+                            ]
+                        };
+                        myChart2.setOption(option2);
+                    </script>
+                    <div class="Bg-main1-bor2-2">
+                        <div class="company">越秀区企业 <span class="com">产业分析统计</span></div>
+                        <div class="company1">
+                            <span class="com11">第一产业</span>
+                            <span class="com12">第二产业</span>
+                            <span class="com13">第三产业</span>
+                        </div>
+                        <div class="company2">
+                            <span class="com21"></span>
+                            <span class="com22"></span>
+                            <span class="com23"></span>
+                            <span class="com24"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Bg-main2">
+            <div class="bgm-bg">
+                <div class="BGM3">
+                    <div class="bgm32"></div>
+                    <div class="bgm34"></div>
+                    <div class="Bg-main1-bor3">222</div>
+                </div>
+            </div>
+            <div class="bgm-bg2">
+                <div class="bgm1-1"></div>
+                <div class="bgm2-2"></div>
+                <div class="bgm1-12"></div>
+                <div class="bgm2-22"></div>
+                <div class="bgm3-3"></div>
+                <div class="bgm4-4"></div>
+                <div class="bgm3-32"></div>
+                <div class="bgm4-42"></div>
+                <div class="Bg-main2-bor3">
+                    <div class="main2-bor1">
+                        <div class="Bg-main2-t">越秀企业纳税情况</div>
+                        <div class="m2-text1" id="m2-text1"></div>
+                        <script>
+                            var myChart4 = echarts.init(document.getElementById('m2-text1'));
+                            var labelTop = {
+                                normal : {
+                                    label : {
+                                        show : true,
+                                        position : 'center',
+                                        formatter : '{b}',
+                                        textStyle: {
+                                            baseline : 'bottom'
+                                        }
+                                    },
+                                    labelLine : {
+                                        show : false
+                                    }
+                                }
+                            };
+                            var labelFromatter = {
+                                normal : {
+                                    label : {
+                                        formatter : function (params){
+                                            return 100 - params.value + '%'
+                                        },
+                                        textStyle: {
+                                            baseline : 'top'
+                                        }
+                                    }
+                                },
+                            }
+                            var labelBottom = {
+                                normal : {
+                                    color: '#ccc',
+                                    label : {
+                                        show : true,
+                                        position : 'center'
+                                    },
+                                    labelLine : {
+                                        show : false
+                                    }
+                                },
+                                emphasis: {
+                                    color: 'rgba(0,0,0,0)'
+                                }
+                            };
+                            var radius = ['30%', '36%'];
+
+                            option4 = {
+                                color : ['#f34a4d', '#ff9c00', '#14f79e', '#02ceff'],
+                                legend: {
+                                    x : 'center',
+                                    y : 'center',
+                                    data:[
+                                        'A','B', 'C', 'D'
+                                    ],
+                                    itemWidth:10,
+                                    itemHeight:10,
+                                    type: 'scroll',
+                                    orient: 'vertical',
+                                    left: '70%',
+                                    top: '10%',
+                                    bottom: '10%',
+                                    textStyle:{
+                                        color:'#fff'
+                                    }
+                                },
+                                series : [
+                                    {
+                                        type : 'pie',
+                                        center : ['20%', '30%'],
+                                        radius : radius,
+                                        x: '0%', // for funnel
+                                        itemStyle : labelFromatter,
+                                        data : [
+                                            {name:'other', value:46, itemStyle : labelBottom},
+                                            {name:'A', value:54,itemStyle : labelTop}
+                                        ]
+                                    },
+                                    {
+                                        type : 'pie',
+                                        center : ['50%', '30%'],
+                                        radius : radius,
+                                        x:'60%', // for funnel
+                                        itemStyle : labelFromatter,
+                                        data : [
+                                            {name:'other', value:56, itemStyle : labelBottom},
+                                            {name:'B', value:44,itemStyle : labelTop}
+                                        ]
+                                    },
+                                    {
+                                        type : 'pie',
+                                        center : ['20%', '75%'],
+                                        radius : radius,
+                                        y: '55%',   // for funnel
+                                        x: '0%',    // for funnel
+                                        itemStyle : labelFromatter,
+                                        data : [
+                                            {name:'other', value:78, itemStyle : labelBottom},
+                                            {name:'C', value:22,itemStyle : labelTop}
+                                        ]
+                                    },
+                                    {
+                                        type : 'pie',
+                                        center : ['50%', '75%'],
+                                        radius : radius,
+                                        y: '55%',   // for funnel
+                                        x:'60%',    // for funnel
+                                        itemStyle : labelFromatter,
+                                        data : [
+                                            {name:'other', value:78, itemStyle : labelBottom},
+                                            {name:'D', value:22,itemStyle : labelTop}
+                                        ]
+                                    }
+                                ]
+                            };
+
+                            myChart4.setOption(option4);
+
+                        </script>
+                    </div>
+                    <div class="main2-bor2">
+                        <div class="Bg-main2-t2">A、D企业增量走势图</div>
+                        <div class="m2-text2" id="m2-text2"></div>
+                        <script>
+                            //    A、D企业增量走势图
+                            var myChart5 = echarts.init(document.getElementById('m2-text2'));
+                            option5 = {
+                                tooltip : {
+                                    trigger: 'axis'
+                                },
+                                calculable : true,
+                                grid:{
+                                    left:40,
+                                    right:20,
+                                    top:40,
+                                    bottom:20
+                                },
+                                xAxis : [
+                                    {
+                                        type : 'category',
+                                        axisLabel:{
+                                            color:'#ccc',
+                                        },
+                                        axisLine:{
+                                            show:true
+                                        },
+                                        splitLine:{
+                                            show: true,
+                                        },
+                                        boundaryGap : false,
+                                        data : ['2011','2012','2013','2014','2015','2016']
+                                    }
+                                ],
+                                yAxis : [
+                                    {
+                                        axisLabel:{
+                                            color:'#ccc',
+                                        },
+                                        splitLine:{
+                                            show: true,
+                                        },
+                                        type : 'value'
+                                    }
+                                ],
+                                series : [
+                                    {
+                                        name:'A',
+                                        type:'line',
+                                        smooth:true,
+                                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                                        data:[10, 12, 21, 54, 260, 830]
+                                    },
+                                    {
+                                        name:'D',
+                                        type:'line',
+                                        smooth:true,
+                                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                                        data:[30, 182, 434, 791, 390, 30]
+                                    }
+                                ]
+                            };
+                            myChart5.setOption(option5);
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="Bg-main3">
+            <div class="BGM2-2">
+                <div class="bgm3-11"></div>
+                <div class="bgm3-22"></div>
+                <div class="bgm3-33"></div>
+                <div class="bgm3-44"></div>
+                <div class="Bg-main3-bor">
+                    <div class="Bg-main3-t">级别占比及统计</div>
+                    <div class="A1" id="main3"> </div>
+                    <script>
+                        <!--级别占比及统计-->
+                        var myChart3 = echarts.init(document.getElementById('main3'));
+                        option3 = {
+                            tooltip : {
+                                trigger: 'item',
+                                formatter: "{a} <br/>{b} : {c} ({d}%)"
+                            },
+                            series : [
+                                {
+                                    name: '访问来源',
+                                    type: 'pie',
+                                    center: ['50%', '45%'],
+                                    radius: ['40%', '60%'],
+                                    data:[
+                                        {
+                                            value:15,
+                                            name:'15%',
+                                            itemStyle:{
+                                                normal:{color:'#184c86'}
+                                            }
+                                        },
+                                        {
+                                            value:15,
+                                            name:'15%',
+                                            itemStyle:{
+                                                normal:{color:'#29f1ff'}
+                                            }
+                                        },
+                                        {
+                                            value:15,
+                                            name:'15%',
+                                            itemStyle:{
+                                                normal:{color:'#2fbbf8'}
+                                            }
+                                        },
+                                        {
+                                            value:15,
+                                            name:'15%',
+                                            itemStyle:{
+                                                normal:{color:'#097fbc'}
+                                            }
+                                        }
+                                    ],
+                                    label: {
+                                        normal: {
+                                            textStyle: {
+                                                color: '#fff'
+                                            }
+                                        }
+                                    },
+                                    labelLine: {
+                                        normal: {
+                                            lineStyle: {
+                                                color: '#f5ba22'
+                                            },
+                                            smooth: 0.2,
+                                            length: 10,
+                                            length2: 20
+                                        }
+                                    },
+                                    itemStyle: {
+                                        emphasis: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    }
+                                }
+                            ]
+                        };
+                        myChart3.setOption(option3);
+
+                    </script>
+                    <div class="A2" id="A2"></div>
+                    <script>
+                        //获得荣誉的企业
+                        var myChart7 = echarts.init(document.getElementById('A2'));
+                        option7 = {
+                            tooltip : {
+                                trigger: 'axis',
+                                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                                }
+                            },
+                            grid: {
+                                left:10,
+                                right:20,
+                                top:0,
+                                bottom:10,
+                                containLabel: true
+                            },
+                            yAxis : [
+                                {
+                                    type : 'category',
+                                    data : ['吊销', '其他', 'D', 'C', 'B', 'A'],
+                                    axisLabel:{
+                                        color:'#ccc'
+                                    },
+                                    axisLine:{
+                                        show:false
+                                    },
+                                    axisTick:{
+                                        show:false
+                                    }
+                                }
+                            ],
+                            xAxis : [
+                                {
+                                    show:false,
+                                    type : 'value',
+                                    splitLine:{
+                                        show: false,
+                                    }
+                                }
+                            ],
+                            series : [
+                                {
+                                    name:'直接访问',
+                                    type:'bar',
+                                    barWidth: '10',
+                                    z: 10,
+                                    label:{
+                                        normal:{
+                                            textStyle: {
+                                                color: '#f5ba22'
+                                            },
+                                            show: true,
+                                            position: 'right'
+                                        }
+                                    },
+                                    itemStyle:{
+                                        normal:{
+                                            color: '#234f6c',
+                                            barBorderRadius: 10,
+                                            shadowBlur: 7,
+                                            shadowColor: '#29f1ff'
+                                        },
+                                        emphasis: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    },
+                                    data:[100, 520, 200, 334, 390, 330]
+                                },
+                                {
+                                    name:'直接访问',
+                                    type:'bar',
+                                    barGap: '-100%',
+                                    barWidth: '10',
+                                    itemStyle:{
+                                        normal:{
+                                            color: '#053b6a',
+                                            barBorderRadius: 10,
+                                            shadowBlur: 7,
+                                            shadowColor: '#2f526a'
+                                        },
+                                        emphasis: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    },
+                                    data:[2500,2500,2500,2500,2500,2500]
+                                }
+                            ]
+                        };
+
+                        myChart7.setOption(option7);
+                    </script>
+                </div>
+            </div>
+            <div class="BGM1-2">
+                <div class="B-bgm1"></div>
+                <div class="B-bgm2"></div>
+                <div class="B-bgm3"></div>
+                <div class="B-bgm4"></div>
+                <div class="Bg-main1-t">产业占比图</div>
+                <div class="Bg-main3-bor2" id="main-last"></div>
+                <script>
+                    var myChart6 = echarts.init(document.getElementById('main-last'));
+                    var colorList = ['#dd7834','#f2c32f','#db5933'];
+                    option6 = {
+                        title: [{
+                            text: '2015年',
+                            x: '25%',
+                            y: '80%',
+                            textAlign: 'center',
+                            textStyle:{
+                                color:'#f5ba22',
+                                fontWeight:'normal',
+                                fontSize:'14'
+                            }
+                        }, {
+                            text: '2016年',
+                            x: '70%',
+                            y: '80%',
+                            textStyle:{
+                                color:'#f5ba22',
+                                fontWeight:'normal',
+                                fontSize:'14'
+                            },
+                            textAlign: 'center'
+                        }],
+                        tooltip : {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        calculable : true,
+                        series : [
+                            {
+                                name:'2015',
+                                type:'pie',
+                                legend:{
+                                    show:false
+                                },
+                                center : ['25%', '45%'],
+                                radius : ['60%', '65%'],
+                                color:['#21b3d9'],
+                                itemStyle : {
+                                    normal : {
+                                        label : {
+                                            position : 'inner'
+                                        },
+                                        labelLine : {
+                                            show : false
+                                        }
+                                    }
+                                },
+                                data:[
+                                    {value:335}
+                                ]
+                            },
+                            {
+                                name:'2015年',
+                                type:'pie',
+                                radius : '55%',
+                                center : ['25%', '45%'],
+                                width: '5%',
+                                label: {
+                                    normal: {
+                                        textStyle: {
+                                            color: '#fff'
+                                        }
+                                    }
+                                },
+                                labelLine:{
+                                    normal:{
+                                        length:'0',
+                                        length2:'0'
+                                    }
+                                },
+                                itemStyle:{
+                                    normal:{
+                                        color: function (params){
+                                            return colorList[params.dataIndex];
+                                        },
+                                        labelLine : {
+                                            show : false
+                                        }
+                                    },
+                                    emphasis: {
+                                        shadowBlur: 10,
+                                        shadowOffsetX: 0,
+                                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                },
+                                data:[
+                                    {value:10, name:'第一产业'},
+                                    {value:10, name:'第二产业'},
+                                    {value:10, name:'第三产业'}
+                                ]
+                            },
+                            {
+                                name:'2016',
+                                type:'pie',
+                                center : ['70%', '45%'],
+                                radius : ['60%', '65%'],
+                                color:['#21b3d9'],
+                                itemStyle : {
+                                    normal : {
+                                        label : {
+                                            position : 'inner'
+                                        },
+                                        labelLine : {
+                                            show : false
+                                        }
+                                    }
+                                },
+                                data:[
+                                    {value:335}
+                                ]
+                            },
+                            {
+                                name:'2016年',
+                                type:'pie',
+                                radius : '55%',
+                                center : ['70%', '45%'],
+                                width: '5%',
+                                label: {
+                                    normal: {
+                                        textStyle: {
+                                            color: '#fff'
+                                        }
+                                    }
+                                },
+                                labelLine:{
+                                    normal:{
+                                        length:'0',
+                                        length2:'0'
+                                    }
+                                },
+                                itemStyle:{
+                                    normal:{
+                                        color: function (params){
+                                            return colorList[params.dataIndex];
+                                        },
+                                        labelLine : {
+                                            show : false
+                                        }
+                                    },
+                                    emphasis: {
+                                        shadowBlur: 10,
+                                        shadowOffsetX: 0,
+                                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                },
+                                data:[
+                                    {value:10, name:'第一产业'},
+                                    {value:5, name:'第二产业'},
+                                    {value:25, name:'第三产业'}
+                                ]
+                            }
+                        ]
+                    };
+
+                    myChart6.setOption(option6);
+
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
